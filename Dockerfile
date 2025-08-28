@@ -4,7 +4,7 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 COPY app/requirements.txt ./requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt pytest
+RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ .
 # Run unit tests
 RUN pytest -q
@@ -15,7 +15,7 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 COPY app/requirements.txt ./requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt gunicorn
+RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ .
 EXPOSE 5000
 CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
