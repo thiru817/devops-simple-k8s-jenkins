@@ -1,14 +1,9 @@
-from flask import Flask, jsonify
-
+from flask import Flask
 app = Flask(__name__)
 
-@app.get("/")
+@app.route('/')
 def hello():
-    return jsonify(message="Hello from DevOps pipeline!"), 200
-
-@app.get("/health")
-def health():
-    return "ok", 200
+    return "Hello from Jenkins + Docker + K8s!"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
