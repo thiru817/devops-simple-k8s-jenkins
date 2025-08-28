@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     // Change to your Docker Hub repo: docker.io/<username>/devops-sample
-    IMAGE_REPO = "docker.io/YOUR_DOCKERHUB_USERNAME/devops-sample"
+    IMAGE_REPO = "docker.io/thiru817/devops-sample"
     IMAGE_TAG  = "${BUILD_NUMBER}"
     KUBE_NAMESPACE = "demo"
     DOCKER_CREDENTIALS = "dockerhub-creds"
