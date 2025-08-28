@@ -36,7 +36,7 @@ pipeline {
     }
     stage('Push Image') {
       steps {
-        withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+        withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS, usernameVariable: 'thiru817', passwordVariable: 'Thiurmurugan12@')]) {
           sh '''
             set -euxo pipefail
             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
