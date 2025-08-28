@@ -40,7 +40,7 @@ pipeline {
           sh '''
             set -euxo pipefail
             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-            docker push $docker.io/thiru817/devops-sample:$IMAGE_TAG
+            docker push $IMAGE_REPO:$IMAGE_TAG
           '''
         }
       }
